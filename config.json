@@ -1,7 +1,7 @@
 {
-  "first_app": "",
-  "change_calculator": "",
-  "mortgage_calculator": "",
-  "top_spots": "",
-  "vstda": ""
+  "first_app": "https://whispering-bayou-39601.herokuapp.com/",
+  "change_calculator": "https://ov-change-calculator.herokuapp.com/",
+  "mortgage_calculator": "https://ov-mortgage-calculator.herokuapp.com/",
+  "top_spots": "https://ov-top-spots.herokuapp.com/",
+  "vstda": "https://ov-vstda.herokuapp.com/"
 }

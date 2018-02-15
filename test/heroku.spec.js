@@ -20,10 +20,10 @@ const checkValidHerokuUrl = (url) => {
   expect(url).to.match(/(http|https):\/\/[A-Za-z0-9-]*.herokuapp.com(\/)?/, `Expected ${config.heroku_url} to match http://*.herokuapp.com`);
 };
 
-describe('Heroku Workshop', () => {
-  this.timeout(6500);
-  describe('config file', () => {
-    projects.forEach((project) => {
+describe('Heroku Workshop', function() {
+  //this.timeout(12000);
+  describe('config file', function() {
+    projects.forEach(function(project) {
       it(`includes a key called "${project}" with a valid Heroku URL for a value`, () => {
         expect(config[project]).to.exist;
         checkValidHerokuUrl(config[project]);
@@ -31,14 +31,14 @@ describe('Heroku Workshop', () => {
     });
   });
 
-  describe('heroku apps', () => {
-    projects.forEach((project) => {
-      this.timeout(15000);
-      it(`${project} is deployed`, (done) => {
+  describe('heroku apps', function () {
+    projects.forEach(function (project) {
+      //this.timeout(20000);
+      it(`${project} is deployed`, function (done) {
         chai
           .request(config[project])
           .get('/')
-          .end((err, res) => {
+          .end(function (err, res) {
             expect(err).to.be.null;
             expect(res).to.have.status(200);
             done();
